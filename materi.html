@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materi Genre</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .materi-container {
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 20px;
+            padding: 30px;
+            margin-top: 20px;
+            backdrop-filter: blur(10px);
+        }
+        .materi-item {
+            background: var(--color-accent-light);
+            margin: 15px 0;
+            padding: 20px;
+            border-radius: 15px;
+            color: #6B4EFF;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .materi-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(162, 148, 249, 0.2);
+        }
+        .materi-item span {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-gradient">
+        <div class="container">
+            <div class="header">
+                <h1>Materi Genre</h1>
+            </div>
+            <div class="materi-container">
+                <div class="materi-item">
+                    <span>Genre Pertama</span>
+                    <span>📘</span>
+                </div>
+                <div class="materi-item">
+                    <span>Genre Kedua</span>
+                    <span>📗</span>
+                </div>
+                <div class="materi-item">
+                    <span>Genre Ketiga</span>
+                    <span>📙</span>
+                </div>
+            </div>
+            <button onclick="window.location.href='index.html'" class="btn" style="margin-top: 20px;">
+                <span>Kembali</span>
+            </button>
+        </div>
+    </div>
+</body>
+</html>
