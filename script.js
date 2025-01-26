@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (materiButton) {
         materiButton.addEventListener('click', function() {
-            window.location.href = 'materi.html';
+            window.location.href = 'opsi_materi.html';
         });
     }
 
