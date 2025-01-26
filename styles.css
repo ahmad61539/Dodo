@@ -15,7 +15,8 @@
     box-sizing: border-box;
 }
 
-html {
+html, body {
+    height: 100%;
     font-size: 16px;
     scroll-behavior: smooth;
 }
@@ -32,6 +33,7 @@ body {
     align-items: center;
     justify-content: center;
     overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .background-gradient {
@@ -66,9 +68,12 @@ body {
     box-shadow: 
         0 15px 35px rgba(162, 148, 249, 0.1),
         0 5px 15px rgba(162, 148, 249, 0.1);
+    backdrop-filter: blur(15px);
     transition: var(--transition-smooth);
     perspective: 1000px;
     margin: 50px auto;
+    max-height: 80vh;
+    overflow-y: auto;
 }
 
 .container:hover {
@@ -79,6 +84,27 @@ body {
     box-shadow: 
         0 20px 45px rgba(162, 148, 249, 0.15),
         0 10px 25px rgba(162, 148, 249, 0.1);
+}
+
+.materi-container {
+    max-height: 55vh;
+    overflow-y: auto;
+    padding-right: 15px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-accent-soft) transparent;
+}
+
+.materi-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.materi-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.materi-container::-webkit-scrollbar-thumb {
+    background-color: var(--color-accent-soft);
+    border-radius: 20px;
 }
 
 .button-group {
