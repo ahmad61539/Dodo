@@ -1,12 +1,17 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
+    // Ensure buttons exist before adding event listeners
     const materiButton = document.getElementById('materiGenre');
     const zahraButton = document.getElementById('talkWithZahra');
 
-    materiButton.addEventListener('click', () => {
-        window.location.href = 'materi.html';
-    });
+    if (materiButton) {
+        materiButton.addEventListener('click', function() {
+            window.location.href = 'materi.html';
+        });
+    }
 
-    zahraButton.addEventListener('click', () => {
-        window.open('https://www.instagram.com/zahraspeaks', '_blank');
-    });
+    if (zahraButton) {
+        zahraButton.addEventListener('click', function() {
+            window.open('https://www.instagram.com/zahrazaliakinantiii/', '_blank');
+        });
+    }
 });
