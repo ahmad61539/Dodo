@@ -5,7 +5,161 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Materi Genre: HIV/AIDS</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+            --color-bg-lightest: #F5EFFF;
+            --color-bg-light: #E5D9F2;
+            --color-accent-soft: #CDC1FF;
+            --color-accent-vibrant: #A294F9;
+            --color-text-primary: #6B4EFF;
+            --color-text-secondary: #8A80AD;
+            --shadow-subtle: 0 10px 30px rgba(162, 148, 249, 0.15);
+            --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(
+                135deg, 
+                var(--color-bg-lightest), 
+                var(--color-bg-light)
+            );
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow-x: hidden;
+        }
+
+        .background-gradient {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                -45deg, 
+                var(--color-bg-lightest), 
+                var(--color-bg-light), 
+                var(--color-accent-soft)
+            );
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            z-index: 10;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            width: 95%;
+            max-width: 420px;
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 2rem;
+            padding: 1.5rem;
+            box-shadow: 
+                0 15px 35px rgba(162, 148, 249, 0.1),
+                0 5px 15px rgba(162, 148, 249, 0.1);
+            backdrop-filter: blur(15px);
+            margin: 20px auto;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .materi-container {
+            max-height: 70vh;
+            overflow-y: auto;
+            padding-right: 10px;
+            scrollbar-width: thin;
+            scrollbar-color: var(--color-accent-soft) transparent;
+        }
+
+        .materi-container::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .materi-container::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .materi-container::-webkit-scrollbar-thumb {
+            background-color: var(--color-accent-soft);
+            border-radius: 20px;
+        }
+
+        .header h1 {
+            text-align: center;
+            color: var(--color-text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .materi-section {
+            margin-bottom: 1.5rem;
+        }
+
+        .materi-section h2 {
+            color: var(--color-text-primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .materi-section p, 
+        .materi-section ul, 
+        .materi-section ol {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+
+        .materi-section ul, 
+        .materi-section ol {
+            padding-left: 1.5rem;
+        }
+
+        .btn {
+            position: relative;
+            padding: 1rem 1.5rem;
+            border: none;
+            border-radius: 1rem;
+            background: var(--color-accent-soft);
+            color: var(--color-text-primary);
+            font-weight: 600;
+            cursor: pointer;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 375px) {
+            .container {
+                width: 100%;
+                padding: 1rem;
+                margin: 10px;
+                border-radius: 1rem;
+            }
+
+            .materi-container {
+                max-height: 70vh;
+            }
+
+            body {
+                font-size: 14px;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="background-gradient">
@@ -71,7 +225,7 @@
                 </div>
 
                 <div class="materi-section">
-                    <h2>Pencegahan: ABCDE</h2>
+                    <h2>Pencegahan:</h2>
                     <ul>
                         <li><strong>A</strong>: Abstinence (tidak hubungan seks pra-nikah)</li>
                         <li><strong>B</strong>: Be Faithful (setia pada pasangan)</li>
@@ -81,7 +235,7 @@
                     </ul>
                 </div>
             </div>
-            <div onclick="window.location.href='index.html'" class="btn" style="margin-top: 20px;">
+            <div class="btn" onclick="window.location.href='index.html'">
                 <span>Kembali</span>
             </div>
         </div>
