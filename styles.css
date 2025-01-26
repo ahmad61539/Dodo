@@ -69,6 +69,7 @@ body {
     backdrop-filter: blur(15px);
     transition: var(--transition-smooth);
     perspective: 1000px;
+    margin: 0 auto;
 }
 
 .container:hover {
